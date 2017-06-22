@@ -31,3 +31,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - bitbucket-pipelines.yml
+  - LICENSE.txt
+  - minima.md
+  - README.md
+  - docker-compose.yml
