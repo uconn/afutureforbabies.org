@@ -1,0 +1,17 @@
+# This is a sample build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/e8YWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+pipelines:
+  branches:
+    develop:
+      - step:
+          image: uconn/web-build-tools
+          script:
+            - echo $UNIVREL_FINGERPRINT > /root/.ssh/known_hosts
+            - echo $UNIVREL_KEY >> /root/.ssh/known_hosts
+            - cat ~/.ssh/known_hosts
+            - ruby -v
+#            - rsync -vrzO -e "ssh -p 2222" --chmod=ugo=rwX --no-perms --omit-dir-times --exclude ".git" --delete ./_site/ bdaley@univrel.pr.uconn.edu:/mnt/inetserve/www/apps/babies/
