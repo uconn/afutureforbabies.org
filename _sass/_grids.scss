@@ -1,9 +1,17 @@
+/* Default Grid */
 $neat-grid: (
   columns: 12,
   gutter: 20px,
 );
 
 
-.container{
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     @include grid-container;
 }
+
+// .col-8 {
+//     @include grid-column(8);
+// }

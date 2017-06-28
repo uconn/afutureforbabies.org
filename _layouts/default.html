@@ -3,12 +3,12 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{{page.name | replace:'.html',''}}">
 
     {% include header.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+    <main aria-label="Content">
+      <div class="container">
         {{ content }}
       </div>
     </main>
