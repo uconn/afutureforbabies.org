@@ -15,3 +15,6 @@ $ open http://localhost/
 The Docker image loads and runs the equivalent of `bundle exec jekyll serve`. The Jekyll service listens on port 4000, but we've mapped it to port 80 on the host machine.
 
 
+## Notes
+- The main Sass file is stored in `<source>/assets/main.scss`. [More info](https://jekyllrb.com/docs/assets/).
+- All Sass partials should be stored in the `<source>/_sass` directory. [More info](https://jekyllrb.com/docs/assets/#sassscss).

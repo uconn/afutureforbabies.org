@@ -1,0 +1,9 @@
+$neat-grid: (
+  columns: 12,
+  gutter: 20px,
+);
+
+
+.container{
+    @include grid-container;
+}
