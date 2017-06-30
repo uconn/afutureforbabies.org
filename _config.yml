@@ -38,3 +38,5 @@ exclude:
 sass:
   style: compressed
 
+
+theme: jekyll-theme-merlot
