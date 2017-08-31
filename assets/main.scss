@@ -2,23 +2,42 @@
 # Do not remove. See https://jekyllrb.com/docs/assets/ for more info.
 ---
 
+/*
+    UConn fonts
+ */
+@import "../node_modules/uconn-banner/sass/base/config";
+@import "../node_modules/uconn-banner/sass/base/utility";
+@import "../node_modules/uconn-banner/sass/fonts/proxima-nova";
+@import "../node_modules/uconn-banner/sass/fonts/icons";
+
+
 @import "base";
 @import "utilities";
 
 
 
+body {
+    margin-top: $nav-height;
+}
 
 
 header {
-    background-color:aquamarine;
+    background-color:$teal;
 }
 
 footer {
-    background-color: aliceblue;
+    background-color: $purple;
+}
+
+p {
+    &.small {
+        font-size: 12px;
+    }
 }
 
 nav#primary {
-    background-color: orange;
+    background-color: $orange;
+    font-size: 14px;
 
     ul, li {
         margin:0;
@@ -34,8 +53,10 @@ nav#primary {
         font-size: 12px;
         display:block;
         text-transform: uppercase;
-        color: #fff;
-        padding: 1em 1.5em;
+        color: $white;
+        padding-left:1.5em;
+        padding-right: 1.5em;
+        line-height: $nav-height;
 
     }
 }
@@ -48,16 +69,25 @@ nav#primary {
     min-height: 600px;
 
     .wrapper {
-        background-color: hsla(187, 100%, 50%, 0.53);
-        color: #fff;
+        background-color: transparentize($teal, 0.3);
+        color: $white;
+    }
+
+    h1.title {
+        color: $white;
+        text-shadow: 1px 1px 1px $grey;
+        font-style: italic;
+        line-height: 1.5em;
+        font-size: 55px;
+        span {
+            display:block;
+            margin-left: 2em;
+        }
     }
 }
 
 #two {
-    border-top: 1px solid #ccc;
-    background: -webkit-linear-gradient(left, bisque 50%, #fff 50%);
-    background: -moz-linear-gradient(left, bisque 50%, #fff 50%);
-    background: -o-linear-gradient(left, bisque 50%, #fff 50%);
-    background: -ms-linear-gradient(left, bisque 50%, #fff 50%);
-    background: linear-gradient(left, bisque 50%, #fff 50%);
+    border-top: 1px solid $light-grey;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, $beige), color-stop(50%, $white));
+    background: linear-gradient(left, $beige 50%, $white 50%);
 }
