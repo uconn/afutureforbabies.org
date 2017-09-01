@@ -8,6 +8,7 @@ Compiling and serving the site locally is as simple as running docker-compose:
 
 ```bash
 $ cd afutureforbabies.org
+$ git flow init -d
 $ docker-compose up
 $ open http://localhost/
 ```

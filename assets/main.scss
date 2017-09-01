@@ -2,13 +2,109 @@
 # Do not remove. See https://jekyllrb.com/docs/assets/ for more info.
 ---
 
+/*
+    UConn fonts
+ */
+@import "../node_modules/uconn-banner/sass/base/config";
+@import "../node_modules/uconn-banner/sass/base/utility";
+@import "../node_modules/uconn-banner/sass/fonts/proxima-nova";
+@import "../node_modules/uconn-banner/sass/fonts/icons";
+
+
 @import "base";
 @import "utilities";
 
+
+
+body {
+    margin-top: $nav-height;
+}
+
+
 header {
-    background-color:aquamarine;
+    background-color:$teal;
 }
 
 footer {
-    background-color: aliceblue;
+    background-color: $purple;
+}
+
+p {
+    &.small {
+        font-size: 12px;
+    }
+}
+
+nav#primary {
+    background-color: $orange;
+    font-size: 14px;
+
+    ul, li {
+        margin:0;
+        padding:0;
+        list-style-type: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        font-size: 12px;
+        display:block;
+        text-transform: uppercase;
+        color: $white;
+        padding-left:1.5em;
+        padding-right: 1.5em;
+        line-height: $nav-height;
+
+    }
+}
+
+#hero {
+    background-image: url(images/hero.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+
+    .wrapper {
+        background-color: transparentize($teal, 0.3);
+        color: $white;
+    }
+
+    h1.title {
+        color: $white;
+        text-shadow: 1px 1px 1px $grey;
+        font-style: italic;
+        line-height: 1.5em;
+        font-size: 55px;
+        span {
+            display:block;
+            margin-left: 2em;
+        }
+    }
+}
+
+.section-padding {
+    padding:75px 0;
+}
+
+#the-latest {
+    border-top: 1px solid $light-grey;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, $beige), color-stop(50%, $white));
+    background: linear-gradient(to right, $beige 50%, $white 50%);
+}
+
+#partners {
+    background-color: $not-white;
+}
+
+footer {
+    color: $white;
+
+    h4 {
+        color:$white;
+        text-transform: uppercase;
+    }
 }

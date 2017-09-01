@@ -1,3 +1,62 @@
+/**
+ * Variables
+ */
+$orange:        #ef6a21;
+$teal:          #00e0d1;
+$purple:        #34075b;
+$not-white:     #f7f7f7;
+$not-black:     #333333;
+$grey:          #7e868c;
+$light-grey:    #cccccc;
+$white:         #ffffff;
+$beige:         #fbf5ec;
+
+$nav-height: 60px;
+
+
+
 html, body {
     margin:0;
+    font-family: "Proxima Nova";
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+    padding-top:0;
+    padding-bottom: .5em;
+}
+p,h5,h6{
+    font-size: 16px;
+}
+
+h1 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    color:$not-black;
+    font-size: 40px;
+}
+
+h2{
+    font-family: Georgia, Times, "Times New Roman", serif;
+    color: $not-black;
+    font-size: 30px;
+}
+
+h3{
+    font-family: Georgia, Times, "Times New Roman", serif;
+    color: $purple;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h4 {
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    font-size: 14px;
+}
+
+blockquote {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 20px;
 }
