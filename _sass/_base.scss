@@ -30,6 +30,17 @@ p,h5,h6{
     font-size: 16px;
 }
 
+a {
+    &:link {
+        color: $orange;
+        font-weight: 500;
+    }
+    &:visited{
+        color: lighten($orange, 20%);
+    }
+
+}
+
 h1 {
     font-family: Georgia, Times, "Times New Roman", serif;
     color:$not-black;

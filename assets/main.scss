@@ -62,23 +62,42 @@ nav#primary {
 }
 
 #hero {
-    background-image: url(images/hero.jpg);
-    background-position: center center;
+    background-image: url(images/Leap_Year_Baby_UConn_Health_JGelineau_5239-nowWithGradients.jpg);
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 600px;
+    min-height: 760px;
+
 
     .wrapper {
         background-color: transparentize($teal, 0.3);
         color: $white;
+        .flex {
+            margin-top: 50px;
+            margin-bottom:50px;
+            display:-webkit-box;
+            display:-ms-flexbox;
+            display:flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            p {
+                -ms-flex-preferred-size: 35%;
+                    flex-basis: 35%;
+            }
+        }
     }
 
     h1.title {
+        -ms-flex-preferred-size: 65%;
+            flex-basis: 65%;
+        margin:0;
+        padding:0;
         color: $white;
         text-shadow: 1px 1px 1px $grey;
         font-style: italic;
         line-height: 1.5em;
-        font-size: 55px;
+        font-size: 4vw;
         span {
             display:block;
             margin-left: 2em;
@@ -91,7 +110,8 @@ nav#primary {
 }
 
 #the-latest {
-    border-top: 1px solid $light-grey;
+    border-top: 2px solid $light-grey;
+    border-bottom: 2px solid $light-grey;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, $beige), color-stop(50%, $white));
     background: linear-gradient(to right, $beige 50%, $white 50%);
 }
