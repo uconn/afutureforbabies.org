@@ -46,6 +46,11 @@ a[href*="//"]:not([href*="afutureforbabies.org"])::after {
     content: " \f08e";
 }
 
+.user-icon {
+    color:$teal;
+    float:right;
+}
+
 nav#primary {
     background-color: $orange;
     font-size: 14px;
@@ -144,6 +149,9 @@ nav#primary {
 
 #partners {
     background-color: $not-white;
+    p {
+        margin-top: 45px;
+    }
 }
 
 footer {

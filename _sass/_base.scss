@@ -6,6 +6,7 @@ $teal:          #00e0d1;
 $purple:        #34075b;
 $not-white:     #f7f7f7;
 $not-black:     #333333;
+$dark-gray:     #464646;
 $grey:          #7e868c;
 $light-grey:    #cccccc;
 $white:         #ffffff;
@@ -48,13 +49,13 @@ a {
 
 h1 {
     font-family: Georgia, Times, "Times New Roman", serif;
-    color:$not-black;
+    color:$dark-gray;
     font-size: 40px;
 }
 
 h2{
     font-family: Georgia, Times, "Times New Roman", serif;
-    color: $not-black;
+    color: $dark-gray;
     font-size: 30px;
 }
 
