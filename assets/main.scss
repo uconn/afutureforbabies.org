@@ -159,6 +159,24 @@ nav#primary {
     padding: 50px 0;
 }
 
+#accordion {
+    h4 {
+        & > a {
+            &::after {
+                font-family: "FontAwesome";
+                content: " \f0d7"; // Caret down
+            }
+            &.collapsed::after {
+            //    content: " \f0d8";    // Caret up
+                content: " \f0da"; // Caret right
+            }
+            &:not(.collapsed){
+                color:$not-black;
+            }
+        }
+    }
+}
+
 footer {
     color: $white;
 
