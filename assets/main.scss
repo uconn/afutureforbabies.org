@@ -35,6 +35,17 @@ p {
     }
 }
 
+/**
+ * Decorations for external links
+ */
+a[href*="//"]:not([href*="afutureforbabies.org"])::after {
+    font-family: "FontAwesome";
+    font-style: normal;
+    color: $grey;
+    text-decoration: none !important;
+    content: " \f08e";
+}
+
 nav#primary {
     background-color: $orange;
     font-size: 14px;
@@ -59,6 +70,9 @@ nav#primary {
         line-height: $nav-height;
 
     }
+}
+.section-padding {
+    padding:75px 0;
 }
 
 #hero {
@@ -105,8 +119,10 @@ nav#primary {
     }
 }
 
-.section-padding {
-    padding:75px 0;
+#in-their-words {
+    .embed-responsive {
+        margin-bottom: 45px;
+    }
 }
 
 #the-latest {
@@ -114,6 +130,16 @@ nav#primary {
     border-bottom: 2px solid $light-grey;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, $beige), color-stop(50%, $white));
     background: linear-gradient(to right, $beige 50%, $white 50%);
+
+    ul {
+        list-style: none;
+        margin:0;
+        padding:0;
+        font-style: italic;
+        li {
+            margin-bottom: 24px;
+        }
+    }
 }
 
 #partners {
