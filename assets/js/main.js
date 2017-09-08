@@ -3,7 +3,7 @@
  * @link https://codepen.io/theandyyates/pen/dGovD/
  */
 $(function() {
-  $("a[href*='#']:not([href='#'])").click(function(event) {
+  $("a[href*='#']:not([href='#'])", "#primary").click(function(event) {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
