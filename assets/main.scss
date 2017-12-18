@@ -121,9 +121,13 @@ nav#primary {
     background-image: url('images/main-bg/main-bg_k5yotp_c_scale,w_480.jpg');
     min-height: 760px;
 
-    /* Other sizes */
-
-
+    /* Other size(s) */
+    @media(min-width: 768px){
+        background-image: url('images/main-bg/main-bg_k5yotp_c_scale,w_925.jpg');
+    }
+    @media(min-width: 1200px){
+        background-image: url('images/main-bg/main-bg_k5yotp_c_scale,w_1253.jpg');
+    }
 
 
 
