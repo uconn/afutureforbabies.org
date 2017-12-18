@@ -34,6 +34,7 @@ exclude:
   - minima.md
   - README.md
   - docker-compose.yml
+  - design
 
 sass:
   style: compressed
