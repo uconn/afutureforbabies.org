@@ -78,6 +78,7 @@ a[href*="//"]:not([href*="afutureforbabies.org"])::after {
   right: 0;
 }
 nav#primary {
+    width: 100vw;
     background-color: $orange;
     font-size: 14px;
     overflow-y: scroll;
@@ -112,7 +113,13 @@ nav#primary {
     }
 }
 .section-padding {
-    padding:75px 0;
+    /* Note: Don't pad right/left or layout breaks */
+    padding-top: $section-padding-mobile;
+    padding-bottom: $section-padding-mobile;
+    @media(min-width:768px){
+        padding-top:$section-padding-desktop;
+        padding-bottom: $section-padding-desktop;
+    }
 }
 
 #hero {
@@ -170,12 +177,16 @@ nav#primary {
         text-shadow: 1px 1px 1px $grey;
         font-style: italic;
         line-height: 1.5em;
-        font-size: 4vw;
+        font-size: 36px; /* fallback */
+        font-size: 3.5vw;
+        @media(min-width: 1200px){
+            font-size: 50px;  /* at 1200px, lock in the font-size */
+        }
         span {
             @media(min-width: 768px){
-
                 display:block;
                 margin-left: 2em;
+                margin-left: 6vw;
             }
         }
     }
@@ -192,7 +203,7 @@ nav#primary {
     border-bottom: 2px solid $light-grey;
     background-color: $beige;
 
-    @media(min-width: 768px){
+    @media(min-width: 768px){ /* split gradient */
         background: -webkit-gradient(linear, left top, right top, color-stop(50%, $beige), color-stop(50%, $white));
         background: linear-gradient(to right, $beige 50%, $white 50%);
     }
