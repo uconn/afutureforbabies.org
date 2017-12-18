@@ -179,6 +179,7 @@ nav#primary {
             }
         }
     }
+}
 
 #in-their-words {
     .embed-responsive {
@@ -189,8 +190,12 @@ nav#primary {
 #the-latest {
     border-top: 2px solid $light-grey;
     border-bottom: 2px solid $light-grey;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, $beige), color-stop(50%, $white));
-    background: linear-gradient(to right, $beige 50%, $white 50%);
+    background-color: $beige;
+
+    @media(min-width: 768px){
+        background: -webkit-gradient(linear, left top, right top, color-stop(50%, $beige), color-stop(50%, $white));
+        background: linear-gradient(to right, $beige 50%, $white 50%);
+    }
 
     ul {
         list-style: none;
@@ -240,5 +245,4 @@ footer {
         color:$white;
         text-transform: uppercase;
     }
-}
 }
