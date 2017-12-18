@@ -51,9 +51,44 @@ a[href*="//"]:not([href*="afutureforbabies.org"])::after {
     float:right;
 }
 
+.nav-shadow {
+  width: 4.5em;
+  height: $nav-height;
+  position: fixed;
+  top: 0;
+  // Using 0% rgba value instead of transparent because of Safari.
+  background: linear-gradient(to right, rgba($orange, 0), $orange 80%);
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+.nav-shadow--start {
+  left: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.nav-shadow--end {
+  right: 0;
+}
 nav#primary {
     background-color: $orange;
     font-size: 14px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    white-space: nowrap;
+
+    ul {
+        position: relative;
+    }
 
     ul, li {
         margin:0;
@@ -66,13 +101,13 @@ nav#primary {
     }
 
     a {
-        font-size: 12px;
         display:block;
         text-transform: uppercase;
         color: $white;
         padding-left:1.5em;
         padding-right: 1.5em;
         line-height: $nav-height;
+        font-weight: normal;
 
     }
 }
@@ -100,20 +135,26 @@ nav#primary {
     .wrapper {
         background-color: transparentize($teal, 0.3);
         color: $white;
-        .flex {
+
+        .flex-on-wide {
+
             margin-top: 50px;
             margin-bottom:50px;
-            display:-webkit-box;
-            display:-ms-flexbox;
-            display:flex;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            p {
-                -ms-flex-preferred-size: 35%;
-                    flex-basis: 35%;
+            @media(min-width: 768px){
+                display:-webkit-box;
+                display:-ms-flexbox;
+                display:flex;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                p {
+                    -ms-flex-preferred-size: 35%;
+                        flex-basis: 35%;
+                }
             }
         }
+
+
     }
 
     h1.title {
@@ -127,11 +168,13 @@ nav#primary {
         line-height: 1.5em;
         font-size: 4vw;
         span {
-            display:block;
-            margin-left: 2em;
+            @media(min-width: 768px){
+
+                display:block;
+                margin-left: 2em;
+            }
         }
     }
-}
 
 #in-their-words {
     .embed-responsive {
@@ -193,4 +236,5 @@ footer {
         color:$white;
         text-transform: uppercase;
     }
+}
 }

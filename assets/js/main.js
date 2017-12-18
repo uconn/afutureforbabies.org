@@ -20,3 +20,42 @@ $(function() {
     }
   });
 });
+
+
+$(function(){
+    $navList = document.querySelector('nav#primary');
+    $shadowStart = document.querySelector('.nav-shadow--start');
+    $shadowEnd = document.querySelector('.nav-shadow--end');
+
+    function handleShadowVisibility() {
+      maxScrollStartReached = $navList.scrollLeft <= 0;
+      maxScrollEndReached = $navList.scrollLeft >= $navList.scrollWidth - $navList.offsetWidth;
+
+      toggleShadow($shadowStart, maxScrollStartReached);
+      toggleShadow($shadowEnd, maxScrollEndReached);
+    }
+
+    function toggleShadow($el, maxScrollReached) {
+      shadowIsVisible = $el.classList.contains('is-visible');
+      showShadow = !maxScrollReached && !shadowIsVisible;
+      hideShadow = maxScrollReached && shadowIsVisible;
+
+      // Using requestAnimationFrame for optimal scroll performance.
+      // https://stackoverflow.com/a/44779316
+      if (showShadow) {
+        window.requestAnimationFrame(function(e){
+            $el.classList.add('is-visible');
+        });
+      } else if (hideShadow) {
+        window.requestAnimationFrame(function(e){
+            $el.classList.remove('is-visible');
+        });
+      }
+    }
+
+    handleShadowVisibility();
+    $navList.addEventListener('scroll', function(e){
+        handleShadowVisibility(e);
+        // console.log('running');
+    });
+});
