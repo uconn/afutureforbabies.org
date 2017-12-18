@@ -1,20 +1,26 @@
 /**
- * Variables
+ * Colors
  */
 $orange:        #ef6a21;
 $teal:          #00e0d1;
 $purple:        #34075b;
 $not-white:     #f7f7f7;
 $not-black:     #333333;
+$dark-gray:     #464646;
 $grey:          #7e868c;
 $light-grey:    #cccccc;
 $white:         #ffffff;
 $beige:         #fbf5ec;
 
+/**
+ * Sizings
+ */
 $nav-height: 60px;
 
 
-
+/**
+ *  Base Element overrides
+ */
 html, body {
     margin:0;
     font-family: "Proxima Nova";
@@ -24,21 +30,32 @@ html, body {
 h1,h2,h3,h4,h5,h6 {
     margin:0;
     padding-top:0;
-    padding-bottom: .5em;
+    padding-bottom: 1em;
 }
 p,h5,h6{
     font-size: 16px;
 }
 
+a {
+    &:link {
+        color: $orange;
+        font-weight: 500;
+    }
+    &:visited{
+        color: lighten($orange, 20%);
+    }
+
+}
+
 h1 {
     font-family: Georgia, Times, "Times New Roman", serif;
-    color:$not-black;
+    color:$dark-gray;
     font-size: 40px;
 }
 
 h2{
     font-family: Georgia, Times, "Times New Roman", serif;
-    color: $not-black;
+    color: $dark-gray;
     font-size: 30px;
 }
 
@@ -59,4 +76,7 @@ blockquote {
     font-family: Georgia, Times, "Times New Roman", serif;
     font-style: italic;
     font-size: 20px;
+    border:none;
+    padding-left: 0;
+    padding-right:0;
 }
