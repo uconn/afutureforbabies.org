@@ -81,11 +81,20 @@ nav#primary {
 }
 
 #hero {
-    background-image: url(images/Leap_Year_Baby_UConn_Health_JGelineau_5239-nowWithGradients.jpg);
-    background-position: top center;
+
+    /* mobile-first bg image */
+    background-image: url('images/main-bg/main-bg_k5yotp_c_scale,w_480.jpg');
+    min-height: 760px;
+
+    /* Other sizes */
+
+
+
+
+
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 760px;
 
 
     .wrapper {
